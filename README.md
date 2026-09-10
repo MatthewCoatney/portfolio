@@ -1,33 +1,109 @@
-# Matthew Coatney Portfolio — v1
+# Matthew Coatney Portfolio — Angular 20
 
-A static, responsive portfolio site with a continuously looping project showcase.
+Angular conversion of the original static portfolio. The design is preserved, but the site is now split into standalone Angular components and routes, with a blog scaffold already in place.
 
-## Files
-- `index.html` — page structure
-- `styles.css` — visual system and responsive layout
-- `script.js` — project data and infinite-loop showcase behavior
+## Run locally
 
-## Before deploying
-Replace these placeholders in `index.html`:
-- `YOUR_EMAIL_HERE`
-- `YOUR_LINKEDIN_URL_HERE`
-- `YOUR_GITHUB_URL_HERE`
+```bash
+npm install
+npm start
+```
 
-## Adding a project
-Edit the `projects` array in `script.js`. Each project accepts:
-- `id`
-- `number`
-- `eyebrow`
-- `badge`
-- `title`
-- `thesis`
-- `description`
-- `tech`
-- `link`
-- `linkLabel`
-- `gradient`
+Angular will open the site at `http://localhost:4200`.
 
-The project rail automatically loops regardless of how many projects are added.
+## Production build
 
-## Deploy
-This is plain HTML/CSS/JS and can be hosted on S3 + CloudFront, GitHub Pages, Netlify, Vercel, or any static host.
+```bash
+npm run build
+```
+
+Output is written to:
+
+```text
+dist/portfolio/browser
+```
+
+## Component structure
+
+```text
+src/app/
+  components/
+    site-header/
+    hero/
+    project-showcase/
+    project-card/
+    about/
+    contact-footer/
+  pages/
+    home/
+    blog-index/
+    blog-post/
+  data/projects.ts
+  models/project.ts
+  app.routes.ts
+```
+
+### Add/edit projects
+
+Edit only:
+
+```text
+src/app/data/projects.ts
+```
+
+The infinitely looping project rail renders from that data automatically.
+
+### Contact links
+
+Update the email and LinkedIn placeholders in:
+
+```text
+src/app/components/contact-footer/contact-footer.component.html
+```
+
+GitHub and YouTube are already configured.
+
+## Replace the existing static repository
+
+If this is going into the existing `portfolio` repository, first make sure you are on `production`:
+
+```bash
+git checkout production
+```
+
+Then replace the old static files with the contents of this Angular project. From the repository root:
+
+```bash
+rm -f index.html styles.css script.js
+```
+
+Copy all files from this project into the repo root, then:
+
+```bash
+npm install
+npm start
+```
+
+Once it looks right:
+
+```bash
+git add .
+git commit -m "Convert portfolio to Angular"
+git push
+```
+
+## AWS Amplify
+
+This repo includes `amplify.yml`. For the connected `production` branch, Amplify should use:
+
+- Build command: handled by `amplify.yml`
+- Artifact directory: `dist/portfolio/browser`
+
+The build pipeline is `npm ci` → `npm run build` → deploy Angular browser output.
+
+## Routes
+
+- `/` — portfolio home
+- `/blog` — blog index
+- `/blog/building-an-ai-assisted-ebay-lister` — first project case study
+

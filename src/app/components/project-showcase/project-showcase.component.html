@@ -1,0 +1,19 @@
+<section id="projects" class="projects-section" aria-labelledby="projects-heading">
+  <div class="section-heading shell">
+    <div>
+      <p class="eyebrow"><span></span> Selected work</p>
+      <h2 id="projects-heading">Projects designed around the job to be done.</h2>
+    </div>
+    <p class="section-note">Scroll through the center rail. The sequence loops continuously.</p>
+  </div>
+
+  <div class="project-stage">
+    <div class="stage-rail" aria-hidden="true"></div>
+    <div class="project-scroller" #scroller tabindex="0" aria-label="Project showcase">
+      @for (project of loopProjects; track project.id + '-' + project.copy) {
+        <app-project-card [project]="project" [totalProjects]="projects.length" />
+      }
+    </div>
+    <div class="scroll-cue" aria-hidden="true"><span>SCROLL</span><i></i></div>
+  </div>
+</section>

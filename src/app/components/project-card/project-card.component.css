@@ -1,0 +1,35 @@
+.project-card { width: min(1180px, calc(100vw - 48px)); margin-inline: auto; min-height: 760px; display: grid; grid-template-columns: .92fr 1.08fr; gap: 22px; align-items: stretch; padding-block: 26px; scroll-snap-align: start; opacity: .55; transform: scale(.985); transition: opacity .35s ease, transform .35s ease; }
+:host-context(.is-active) .project-card, .project-card.is-active { opacity: 1; transform: scale(1); }
+.project-visual, .project-content { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; min-height: 700px; }
+.project-visual { position: relative; padding: 24px; background: var(--project-gradient); box-shadow: inset 0 1px rgba(255,255,255,.035); display: flex; flex-direction: column; }
+.visual-top { display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 2; }
+.project-index, .project-badge { font-size: 9px; text-transform: uppercase; letter-spacing: .16em; color: rgba(255,255,255,.62); font-weight: 700; }
+.project-badge { padding: 8px 11px; border: 1px solid rgba(255,255,255,.13); border-radius: 999px; background: rgba(5,10,18,.18); }
+.interface-mock { width: 88%; margin: auto; border: 1px solid rgba(255,255,255,.13); border-radius: 18px; overflow: hidden; background: rgba(7,12,22,.72); box-shadow: 0 36px 80px rgba(0,0,0,.32); transform: perspective(900px) rotateY(-5deg) rotateX(2deg); }
+.mockbar { height: 38px; display: flex; align-items: center; gap: 6px; padding: 0 14px; border-bottom: 1px solid var(--line); }
+.mockbar i { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,.22); }
+.mockbody { min-height: 310px; display: grid; grid-template-columns: 74px 1fr; }
+.mocknav { border-right: 1px solid var(--line); padding: 20px 15px; display: flex; flex-direction: column; gap: 17px; }
+.mocknav b { height: 7px; width: 100%; border-radius: 7px; background: rgba(255,255,255,.08); }
+.mockmain { padding: 30px; }
+.mock-title { width: 55%; height: 13px; border-radius: 10px; background: rgba(255,255,255,.18); }
+.mock-sub { width: 36%; height: 7px; margin-top: 11px; border-radius: 10px; background: rgba(255,255,255,.08); }
+.mock-photo { margin-top: 29px; height: 128px; border-radius: 14px; border: 1px solid rgba(101,216,255,.16); background: linear-gradient(145deg, rgba(101,216,255,.08), rgba(159,146,255,.06)); display: grid; place-items: center; }
+.mock-photo span { width: 54px; height: 68px; border-radius: 5px; border: 1px solid rgba(255,255,255,.2); background: linear-gradient(145deg, rgba(244,200,138,.26), rgba(121,242,208,.1)); transform: rotate(-7deg); }
+.mock-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin-top: 17px; }
+.mock-stats div { height: 52px; border: 1px solid var(--line); border-radius: 10px; background: rgba(255,255,255,.025); }
+.visual-caption { position: relative; z-index: 2; display: flex; justify-content: space-between; gap: 28px; align-items: end; }
+.visual-caption strong { max-width: 300px; font-size: 30px; line-height: 1; letter-spacing: -.035em; }
+.visual-caption span { max-width: 210px; color: rgba(255,255,255,.58); font-size: 11px; line-height: 1.55; text-align: right; }
+.project-content { padding: 46px 48px; background: linear-gradient(180deg, rgba(17,26,45,.9), rgba(11,18,32,.84)); display: flex; flex-direction: column; }
+.project-meta { display: flex; align-items: center; gap: 13px; color: var(--faint); font-size: 9px; text-transform: uppercase; letter-spacing: .15em; font-weight: 700; }
+.project-meta i { height: 1px; flex: 1; background: var(--line); }
+.project-content h3 { margin: 58px 0 0; font-size: clamp(50px, 5vw, 72px); line-height: .95; letter-spacing: -.05em; font-weight: 600; }
+.thesis { margin: 30px 0 0; font-family: "Instrument Serif", serif; color: var(--cyan); font-size: 28px; line-height: 1.2; }
+.description { color: var(--muted); font-size: 15px; line-height: 1.72; margin: 27px 0 0; max-width: 650px; }
+.tech-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+.tech-list span { border: 1px solid var(--line); border-radius: 999px; padding: 8px 11px; color: var(--muted); font-size: 9px; text-transform: uppercase; letter-spacing: .08em; }
+.project-link { margin-top: auto; padding-top: 34px; color: white; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--line); font-size: 13px; font-weight: 700; }
+.project-link span { color: var(--cyan); font-size: 18px; }
+@media (max-width: 980px) { .project-card { grid-template-columns: 1fr; min-height: auto; gap: 16px; padding-block: 20px; } .project-visual, .project-content { min-height: 560px; } }
+@media (max-width: 650px) { .project-card { width: calc(100vw - 24px); min-height: 1050px; } .project-visual { min-height: 450px; padding: 20px; } .project-content { min-height: 575px; padding: 29px 24px; } .visual-caption strong { font-size: 24px; } .visual-caption span { display: none; } .interface-mock { width: 96%; } .mockbody { grid-template-columns: 56px 1fr; min-height: 210px; } .project-content h3 { font-size: 46px; } .thesis { font-size: 23px; } }

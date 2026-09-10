@@ -1,0 +1,54 @@
+<main class="article shell">
+  <a class="back" routerLink="/blog">← Blog</a>
+  <header class="article-head">
+    <p class="eyebrow"><span></span> Case study · AI · Commerce · AWS</p>
+    <h1>Building an AI-Assisted eBay Lister</h1>
+    <p class="dek">The real problem was never writing a description. It was reducing the cognitive cost of turning physical inventory into structured digital commerce.</p>
+    <a class="demo" href="https://youtu.be/s7hCm8nxoRs" target="_blank" rel="noreferrer">Watch the project demo ↗</a>
+  </header>
+
+  <article class="prose">
+    <p>Most resale workflows waste time in the wrong place. The valuable work is sourcing inventory, recognizing what matters, understanding condition and scarcity, pricing intelligently, and getting items in front of buyers. Traditional listing workflows instead force sellers to spend a disproportionate amount of time on repetitive data entry.</p>
+
+    <h2>The problem</h2>
+    <p>Listing a collectible book is deceptively complex. A photograph may contain enough information to identify title, author, publisher, edition, binding, dust jacket, slipcase, signatures, and other characteristics that materially affect value. Extracting those facts reliably still requires research, and the same information must later be translated into marketplace-specific structure.</p>
+
+    <blockquote>A seller should be able to photograph an item and move quickly toward a confident, market-ready listing.</blockquote>
+
+    <h2>A workflow, not an AI trick</h2>
+    <p>The application is designed as a sequence: <strong>Photographs → Identification → Research → Pricing → Structured Listing → eBay Export.</strong> AI reasons over ambiguous visual and textual information, while the surrounding application provides deterministic state, validation, persistence, marketplace rules, and failure handling.</p>
+
+    <h2>Product photos as the starting point</h2>
+    <p>The natural input for a reseller is not a form; it is a photograph. Instead of requiring the seller to begin with ISBNs, publisher fields, or edition data, the system starts with the thing they already have: images of the object. The identification process turns those images into structured information that later stages can use.</p>
+
+    <h2>Model output is not application state</h2>
+    <p>Models are probabilistic. Applications cannot be. AI-generated information is therefore treated as input to a structured workflow rather than unquestioned truth. The backend validates and normalizes information before persistence, while pricing and export states remain independently trackable.</p>
+
+    <pre><code>{{ '{' }}
+  "marketplaces": {{ '{' }}
+    "ebay": {{ '{' }}
+      "pricing": {{ '{' }}
+        "status": "priced",
+        "suggested_price": 32.95
+      {{ '}' }}
+    {{ '}' }}
+  {{ '}' }},
+  "workflow": {{ '{' }}
+    "state": "priced",
+    "ebay_exported": false
+  {{ '}' }}
+{{ '}' }}</code></pre>
+
+    <h2>Building a solution, not merely a tool</h2>
+    <p>An AI model that identifies a book is a tool. An application that photographs the book, identifies it, structures the data, researches pricing, tracks workflow state, generates sales copy, and prepares the item for marketplace export is a solution. The difficult engineering often lives between the impressive demo moments: state transitions, validation, retries, integrations, and the UX that makes the entire system trustworthy.</p>
+
+    <h2>The architecture</h2>
+    <p>The current system combines Python, FastAPI, structured validation, persistence, AWS infrastructure, event-driven workflows, eBay integrations, and an Angular-oriented frontend architecture. Each service exists to support the workflow rather than to decorate the technology list.</p>
+
+    <h2>What comes next</h2>
+    <p>The architecture can expand into multi-marketplace publishing, inventory management, bulk photography, automated pricing refreshes, collectible-specific metadata, image-assisted grading, sales analytics, and seller-specific pricing strategies. The larger opportunity is reducing the cognitive cost of turning physical inventory into structured digital commerce.</p>
+
+    <p class="closing">That is the system I am building.</p>
+  </article>
+</main>
+<app-contact-footer />

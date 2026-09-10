@@ -1,0 +1,13 @@
+.article { padding: 90px 0 70px; }
+.back { color: var(--muted); font-size: 12px; }
+.article-head { max-width: 980px; margin-top: 60px; }
+.article-head h1 { font-size: clamp(58px, 8vw, 104px); line-height: .9; letter-spacing: -.06em; margin: 0; }
+.dek { color: var(--muted); max-width: 800px; font-size: 22px; line-height: 1.55; margin: 32px 0 0; }
+.demo { display: inline-block; margin-top: 28px; color: var(--cyan); font-weight: 700; }
+.prose { max-width: 790px; margin: 90px auto 0; }
+.prose p { color: #c4ccdb; font-size: 18px; line-height: 1.85; margin: 0 0 28px; }
+.prose h2 { font-size: 40px; letter-spacing: -.035em; margin: 72px 0 22px; }
+.prose blockquote { margin: 54px 0; padding: 24px 0 24px 28px; border-left: 2px solid var(--cyan); color: white; font-family: "Instrument Serif", serif; font-size: 32px; line-height: 1.35; }
+.prose pre { margin: 42px 0; padding: 24px; border: 1px solid var(--line); border-radius: 18px; background: rgba(5,10,18,.72); overflow-x: auto; color: var(--aqua); }
+.prose code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 13px; line-height: 1.65; }
+.prose .closing { color: white; font-family: "Instrument Serif", serif; font-size: 34px; margin-top: 60px; }

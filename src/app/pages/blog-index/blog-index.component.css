@@ -1,0 +1,11 @@
+.blog { padding: 110px 0 80px; min-height: 70vh; }
+.blog-hero { max-width: 900px; }
+.blog-hero h1 { font-size: clamp(54px, 7vw, 92px); line-height: .94; letter-spacing: -.055em; margin: 0; }
+.blog-hero > p:last-child { color: var(--muted); font-size: 20px; line-height: 1.6; max-width: 700px; margin-top: 28px; }
+.post-list { margin-top: 80px; }
+.post-card { display: block; border: 1px solid var(--line); border-radius: var(--radius); padding: 42px; background: linear-gradient(145deg, rgba(17,26,45,.84), rgba(10,17,30,.76)); transition: transform .25s ease, border-color .25s ease; }
+.post-card:hover { transform: translateY(-4px); border-color: rgba(101,216,255,.28); }
+.post-meta { display: flex; justify-content: space-between; gap: 20px; color: var(--faint); font-size: 10px; text-transform: uppercase; letter-spacing: .14em; }
+.post-card h2 { font-size: clamp(38px, 5vw, 64px); margin: 36px 0 18px; letter-spacing: -.045em; }
+.post-card p { color: var(--muted); max-width: 740px; font-size: 16px; line-height: 1.7; }
+.read { display: inline-block; margin-top: 28px; color: var(--cyan); font-weight: 700; font-size: 13px; }

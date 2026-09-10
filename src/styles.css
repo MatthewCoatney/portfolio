@@ -1,0 +1,33 @@
+:root {
+  --bg: #080d19;
+  --bg-2: #0d1426;
+  --panel: rgba(17,25,44,.72);
+  --panel-strong: #111a2d;
+  --text: #f4f6fb;
+  --muted: #aeb8cc;
+  --faint: #6e7890;
+  --line: rgba(255,255,255,.095);
+  --cyan: #65d8ff;
+  --aqua: #79f2d0;
+  --violet: #9f92ff;
+  --warm: #f4c88a;
+  --shell: min(1180px, calc(100vw - 48px));
+  --radius: 28px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: radial-gradient(circle at 72% 18%, rgba(87,111,255,.11), transparent 32%), linear-gradient(180deg, #070b14 0%, var(--bg) 42%, #070b14 100%); color: var(--text); font-family: "DM Sans", sans-serif; min-height: 100vh; overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+button, a { -webkit-tap-highlight-color: transparent; }
+::selection { background: rgba(101,216,255,.28); color: white; }
+.shell { width: var(--shell); margin-inline: auto; }
+.ambient { position: fixed; border-radius: 999px; filter: blur(90px); pointer-events: none; z-index: -3; opacity: .22; }
+.ambient-a { width: 420px; height: 420px; background: #1367a5; top: 22vh; left: -180px; }
+.ambient-b { width: 520px; height: 520px; background: #5e49a2; right: -280px; bottom: 6vh; }
+.grain { position: fixed; inset: 0; pointer-events: none; z-index: 30; opacity: .035; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.86' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E"); }
+.eyebrow { margin: 0 0 24px; color: var(--muted); text-transform: uppercase; font-size: 11px; letter-spacing: .19em; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+.eyebrow span { width: 28px; height: 1px; background: linear-gradient(90deg, var(--cyan), var(--violet)); box-shadow: 0 0 16px rgba(101,216,255,.45); }
+h2 { font-size: clamp(42px, 5vw, 68px); line-height: .98; letter-spacing: -.045em; margin: 0; }
+@media (max-width: 980px) { :root { --shell: min(100% - 32px, 760px); } }
+@media (max-width: 650px) { :root { --shell: calc(100% - 24px); --radius: 21px; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
