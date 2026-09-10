@@ -1,0 +1,34 @@
+<article class="project-card" [attr.data-project]="project.id" [attr.data-copy]="project.copy">
+  <div class="project-visual" [style.--project-gradient]="project.gradient">
+    <div class="visual-top">
+      <span class="project-index">PROJECT {{ project.number }}</span>
+      <span class="project-badge">{{ project.badge }}</span>
+    </div>
+
+    <div class="interface-mock" aria-hidden="true">
+      <div class="mockbar"><i></i><i></i><i></i></div>
+      <div class="mockbody">
+        <div class="mocknav"><b></b><b></b><b></b><b></b></div>
+        <div class="mockmain">
+          <div class="mock-title"></div>
+          <div class="mock-sub"></div>
+          <div class="mock-photo"><span></span></div>
+          <div class="mock-stats"><div></div><div></div><div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="visual-caption"><strong>{{ visualTitle }}</strong><span>{{ visualCaption }}</span></div>
+  </div>
+
+  <div class="project-content">
+    <div class="project-meta"><span>{{ project.eyebrow }}</span><i></i><span>{{ project.number }} / {{ totalProjects.toString().padStart(2, '0') }}</span></div>
+    <h3>{{ project.title }}</h3>
+    <p class="thesis">{{ project.thesis }}</p>
+    <p class="description">{{ project.description }}</p>
+    <div class="tech-list">
+      @for (item of project.tech; track item) { <span>{{ item }}</span> }
+    </div>
+    <a class="project-link" [href]="project.link" [attr.target]="isExternal ? '_blank' : null" [attr.rel]="isExternal ? 'noreferrer' : null">{{ project.linkLabel }}<span>↗</span></a>
+  </div>
+</article>

@@ -5,30 +5,65 @@
       <span class="project-badge">{{ project.badge }}</span>
     </div>
 
-    <div class="interface-mock" aria-hidden="true">
-      <div class="mockbar"><i></i><i></i><i></i></div>
-      <div class="mockbody">
-        <div class="mocknav"><b></b><b></b><b></b><b></b></div>
-        <div class="mockmain">
-          <div class="mock-title"></div>
-          <div class="mock-sub"></div>
-          <div class="mock-photo"><span></span></div>
-          <div class="mock-stats"><div></div><div></div><div></div></div>
+    @if (project.id === 'ebay-lister') {
+      <a
+        class="ebay-project-image"
+        [href]="project.link"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Watch the AI-assisted eBay Lister demo"
+      >
+        <img
+          src="/assets/ebay-listing-preview.png"
+          alt="Sigil Books generated listing for Andersen's Fairy Tales"
+        />
+      </a>
+    } @else {
+      <div class="interface-mock" aria-hidden="true">
+        <div class="mockbar"><i></i><i></i><i></i></div>
+        <div class="mockbody">
+          <div class="mocknav"><b></b><b></b><b></b><b></b></div>
+          <div class="mockmain">
+            <div class="mock-title"></div>
+            <div class="mock-sub"></div>
+            <div class="mock-photo"><span></span></div>
+            <div class="mock-stats"><div></div><div></div><div></div></div>
+          </div>
         </div>
       </div>
-    </div>
+    }
 
-    <div class="visual-caption"><strong>{{ visualTitle }}</strong><span>{{ visualCaption }}</span></div>
+    <div class="visual-caption">
+      <strong>{{ visualTitle }}</strong>
+      <span>{{ visualCaption }}</span>
+    </div>
   </div>
 
   <div class="project-content">
-    <div class="project-meta"><span>{{ project.eyebrow }}</span><i></i><span>{{ project.number }} / {{ totalProjects.toString().padStart(2, '0') }}</span></div>
+    <div class="project-meta">
+      <span>{{ project.eyebrow }}</span>
+      <i></i>
+      <span>{{ project.number }} / {{ totalProjects.toString().padStart(2, '0') }}</span>
+    </div>
+
     <h3>{{ project.title }}</h3>
     <p class="thesis">{{ project.thesis }}</p>
     <p class="description">{{ project.description }}</p>
+
     <div class="tech-list">
-      @for (item of project.tech; track item) { <span>{{ item }}</span> }
+      @for (item of project.tech; track item) {
+        <span>{{ item }}</span>
+      }
     </div>
-    <a class="project-link" [href]="project.link" [attr.target]="isExternal ? '_blank' : null" [attr.rel]="isExternal ? 'noreferrer' : null">{{ project.linkLabel }}<span>↗</span></a>
+
+    <a
+      class="project-link"
+      [href]="project.link"
+      [attr.target]="isExternal ? '_blank' : null"
+      [attr.rel]="isExternal ? 'noreferrer' : null"
+    >
+      {{ project.linkLabel }}
+      <span>↗</span>
+    </a>
   </div>
 </article>
