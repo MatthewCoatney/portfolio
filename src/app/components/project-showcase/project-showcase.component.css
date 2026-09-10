@@ -4,7 +4,7 @@
 .section-note { color: var(--faint); font-size: 11px; line-height: 1.6; max-width: 220px; justify-self: end; margin: 0; }
 .project-stage { position: relative; }
 .stage-rail { position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: linear-gradient(to bottom, transparent, var(--line) 8%, var(--line) 92%, transparent); pointer-events: none; }
-.project-scroller { height: 820px; overflow-y: auto; overscroll-behavior: contain; scroll-snap-type: y mandatory; scrollbar-width: none; padding-inline: 24px; }
+.project-scroller { height: 820px; overflow-y: auto; overscroll-behavior: contain;  scrollbar-width: none; padding-inline: 24px; }
 .project-scroller::-webkit-scrollbar { display: none; }
 .scroll-cue { position: absolute; right: max(20px, calc((100vw - 1180px)/2 - 56px)); top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; align-items: center; gap: 14px; color: var(--faint); }
 .scroll-cue span { writing-mode: vertical-rl; font-size: 8px; letter-spacing: .24em; font-weight: 700; }

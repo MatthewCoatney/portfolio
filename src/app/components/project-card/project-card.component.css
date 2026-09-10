@@ -1,4 +1,4 @@
-.project-card { width: min(1180px, calc(100vw - 48px)); margin-inline: auto; min-height: 760px; display: grid; grid-template-columns: .92fr 1.08fr; gap: 22px; align-items: stretch; padding-block: 26px; scroll-snap-align: start; opacity: .55; transform: scale(.985); transition: opacity .35s ease, transform .35s ease; }
+.project-card { width: min(1180px, calc(100vw - 48px)); margin-inline: auto; min-height: 760px; display: grid; grid-template-columns: .92fr 1.08fr; gap: 22px; align-items: stretch; padding-block: 26px;  opacity: .55; transform: scale(.985); transition: opacity .35s ease, transform .35s ease; }
 :host-context(.is-active) .project-card, .project-card.is-active { opacity: 1; transform: scale(1); }
 .project-visual, .project-content { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; min-height: 700px; }
 .project-visual { position: relative; padding: 24px; background: var(--project-gradient); box-shadow: inset 0 1px rgba(255,255,255,.035); display: flex; flex-direction: column; }
