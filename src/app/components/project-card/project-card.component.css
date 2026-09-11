@@ -36,7 +36,7 @@
 
 
 /* Real project artwork: replaces only the original interface mockup */
-.ebay-project-image {
+.project-preview-image {
   position: relative;
   display: block;
 
@@ -66,7 +66,7 @@
     box-shadow .35s ease;
 }
 
-.ebay-project-image img {
+.project-preview-image img {
   position: absolute;
   inset: 0;
 
@@ -82,7 +82,7 @@
   object-position: center 15%;
 }
 
-.ebay-project-image::after {
+.project-preview-image::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -93,7 +93,7 @@
     inset 0 -40px 60px rgba(5, 10, 18, .08);
 }
 
-.ebay-project-image:hover {
+.project-preview-image:hover {
   transform:
     perspective(900px)
     rotateY(-2deg)
@@ -105,22 +105,22 @@
     0 0 0 1px rgba(101, 216, 255, .12);
 }
 
-.ebay-project-image:hover img {
+.project-preview-image:hover img {
   transform: scale(1.015);
 }
 
-.ebay-project-image img {
+.project-preview-image img {
   transition: transform .4s ease;
 }
 
 @media (max-width: 650px) {
-  .ebay-project-image {
+  .project-preview-image {
     width: 96%;
     height: 245px;
     transform: none;
   }
 
-  .ebay-project-image:hover {
+  .project-preview-image:hover {
     transform: translateY(-2px);
   }
 }

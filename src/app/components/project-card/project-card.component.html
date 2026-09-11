@@ -5,17 +5,17 @@
       <span class="project-badge">{{ project.badge }}</span>
     </div>
 
-    @if (project.id === 'ebay-lister') {
+    @if (project.previewImage) {
       <a
-        class="ebay-project-image"
+        class="project-preview-image"
         [href]="project.link"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Watch the AI-assisted eBay Lister demo"
+        [attr.target]="isExternal ? '_blank' : null"
+        [attr.rel]="isExternal ? 'noreferrer' : null"
+        [attr.aria-label]="project.linkLabel"
       >
         <img
-          src="/assets/ebay-listing-preview.png"
-          alt="Sigil Books generated listing for Andersen's Fairy Tales"
+          [src]="project.previewImage"
+          [alt]="project.previewAlt || project.title"
         />
       </a>
     } @else {

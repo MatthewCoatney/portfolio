@@ -10,6 +10,8 @@ export interface Project {
   link: string;
   linkLabel: string;
   gradient: string;
+  previewImage?: string;
+  previewAlt?: string;
 }
 
 export interface ProjectLoopItem extends Project {
