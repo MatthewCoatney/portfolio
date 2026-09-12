@@ -9,6 +9,10 @@ export interface Project {
   tech: string[];
   link: string;
   linkLabel: string;
+  secondaryLink?: string;
+  secondaryLinkLabel?: string;
+  demoUsername?: string;
+  demoPassword?: string;
   gradient: string;
   previewImage?: string;
   previewAlt?: string;

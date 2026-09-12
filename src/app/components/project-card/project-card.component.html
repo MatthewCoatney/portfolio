@@ -65,5 +65,33 @@
       {{ project.linkLabel }}
       <span>↗</span>
     </a>
+
+    @if (project.secondaryLink) {
+      <div class="project-demo">
+        <a
+          class="project-secondary-link"
+          [href]="project.secondaryLink"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {{ project.secondaryLinkLabel }}
+          <span>↗</span>
+        </a>
+
+        @if (project.demoUsername && project.demoPassword) {
+          <div class="demo-credentials">
+            <span class="demo-credentials-label">PUBLIC DEMO LOGIN</span>
+            <div>
+              <span>Username</span>
+              <code>{{ project.demoUsername }}</code>
+            </div>
+            <div>
+              <span>Password</span>
+              <code>{{ project.demoPassword }}</code>
+            </div>
+          </div>
+        }
+      </div>
+    }
   </div>
 </article>

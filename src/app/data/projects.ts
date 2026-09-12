@@ -17,30 +17,32 @@ export const PROJECTS: Project[] = [
     gradient: 'radial-gradient(circle at 24% 22%, rgba(101,216,255,.33), transparent 34%), radial-gradient(circle at 78% 36%, rgba(159,146,255,.28), transparent 38%), linear-gradient(145deg, #102139, #11152a 58%, #08101c)'
   },
   {
-    id: 'raspberry-pi-menu',
+    id: 'seawich-digital-menu',
     number: '02',
-    eyebrow: 'IoT · Cloud · Digital Signage',
-    badge: 'Production system',
+    eyebrow: 'AWS · IoT · Digital Signage',
+    badge: 'Full-stack system',
     previewImage: '/assets/menu-preview.png',
-    previewAlt: 'Raspberry Pi powered digital menu system',
-    title: 'Raspberry Pi Digital Menu System',
-    thesis: 'Change the menu once. Every display updates without touching the displays.',
-    description: 'A cloud-managed digital menu platform built to replace the friction of manually maintaining restaurant signage. Three Raspberry Pi-powered displays present the customer-facing menus while an Angular and Ionic management application gives staff a single place to update content. AWS services provide authentication, storage, data synchronization, and distribution so menu changes can propagate across the system without editing individual screens.',
+    previewAlt: 'The Seawich cloud-connected digital menu system',
+    title: 'The Seawich — Digital Menu System',
+    thesis: 'Change the price once. Every display gets the update without touching the displays.',
+    description: 'A cloud-connected digital signage and remote price-management system designed for Raspberry Pi displays. Independent Angular and Ionic menu screens provide the customer-facing signage while an authenticated management interface lets pricing be changed remotely. AWS AppSync, GraphQL, DynamoDB, Cognito, and Amplify connect the displays, data, authentication, and deployment into one working full-stack system.',
     tech: [
       'Angular',
       'Ionic',
+      'TypeScript',
       'Raspberry Pi',
       'AWS Amplify',
       'AppSync',
       'GraphQL',
       'DynamoDB',
-      'Cognito',
-      'S3',
-      'CloudFront',
-      'piSignage'
+      'Cognito'
     ],
-    link: 'https://main.d1sj73oj2s6s26.amplifyapp.com',
-    linkLabel: 'LIVE DEMO',
+    link: 'https://main.d26v2pfw328oke.amplifyapp.com/menu/left',
+    linkLabel: 'LAUNCH LIVE DEMO',
+    secondaryLink: 'https://main.d26v2pfw328oke.amplifyapp.com/auth/login',
+    secondaryLinkLabel: 'OPEN PRICE CHANGER',
+    demoUsername: 'demo@seawich.app',
+    demoPassword: 'SeawichDemo2026!',
     gradient: 'radial-gradient(circle at 72% 20%, rgba(121,242,208,.30), transparent 34%), radial-gradient(circle at 20% 72%, rgba(101,216,255,.22), transparent 38%), linear-gradient(145deg, #10272a, #101d2d 60%, #081019)'
   }
 ];

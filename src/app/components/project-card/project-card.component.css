@@ -124,3 +124,81 @@
     transform: translateY(-2px);
   }
 }
+
+/* Optional interactive demo controls */
+.project-demo {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem 1.25rem;
+}
+
+.project-secondary-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  width: fit-content;
+  padding: .65rem .9rem;
+  border: 1px solid rgba(255, 255, 255, .22);
+  border-radius: 999px;
+  color: inherit;
+  text-decoration: none;
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+
+.project-secondary-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, .48);
+  background: rgba(255, 255, 255, .06);
+}
+
+.demo-credentials {
+  display: grid;
+  gap: .35rem;
+  padding: .7rem .85rem;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: .7rem;
+  background: rgba(0, 0, 0, .18);
+  font-size: .72rem;
+}
+
+.demo-credentials-label {
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  opacity: .65;
+}
+
+.demo-credentials > div {
+  display: grid;
+  grid-template-columns: 4.5rem auto;
+  gap: .5rem;
+  align-items: baseline;
+}
+
+.demo-credentials > div > span {
+  opacity: .6;
+}
+
+.demo-credentials code {
+  color: inherit;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: .7rem;
+  user-select: all;
+}
+
+@media (max-width: 650px) {
+  .project-demo {
+    display: grid;
+  }
+
+  .demo-credentials {
+    width: fit-content;
+    max-width: 100%;
+  }
+}
+
