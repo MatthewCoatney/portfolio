@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+
+export type HeroDocument = 'resume' | 'brag';
 
 @Component({
   selector: 'app-hero',
@@ -6,4 +8,10 @@ import { Component } from '@angular/core';
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css'
 })
-export class HeroComponent {}
+export class HeroComponent {
+  @Output() openDocument = new EventEmitter<HeroDocument>();
+
+  showDocument(document: HeroDocument): void {
+    this.openDocument.emit(document);
+  }
+}
