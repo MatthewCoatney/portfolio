@@ -1,0 +1,169 @@
+:host {
+  display: block;
+}
+
+.resume {
+  width: min(920px, 100%);
+  margin: 0 auto;
+  color: #e9edf3;
+  line-height: 1.65;
+}
+
+.resume-header {
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.resume-kicker {
+  margin: 0 0 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+.resume-header h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 6vw, 4.75rem);
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+.resume-title {
+  margin: 1rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  opacity: 0.82;
+}
+
+.resume-summary {
+  max-width: 760px;
+  margin: 2rem 0 0;
+  font-size: 1.05rem;
+  color: rgba(233, 237, 243, 0.78);
+}
+
+.resume-section {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.resume-section h2 {
+  margin: 0 0 1.5rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(233, 237, 243, 0.58);
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.skill-grid > div {
+  padding: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.skill-grid h3 {
+  margin: 0 0 0.35rem;
+  font-size: 0.96rem;
+}
+
+.skill-grid p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: rgba(233, 237, 243, 0.66);
+}
+
+.experience + .experience,
+.project + .project {
+  margin-top: 2.75rem;
+}
+
+.experience header,
+.project header {
+  margin-bottom: 1rem;
+}
+
+.experience h3,
+.project h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  letter-spacing: -0.025em;
+}
+
+.role,
+.project header span {
+  display: block;
+  margin: 0.25rem 0 0;
+  font-size: 0.88rem;
+  color: rgba(233, 237, 243, 0.55);
+}
+
+.experience ul,
+.project ul,
+.compact-list {
+  margin: 1rem 0 0;
+  padding-left: 1.15rem;
+}
+
+.experience li,
+.project li {
+  margin: 0.6rem 0;
+  color: rgba(233, 237, 243, 0.78);
+}
+
+.project > p {
+  margin: 0;
+  max-width: 760px;
+  color: rgba(233, 237, 243, 0.78);
+}
+
+.split-section {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 3rem;
+}
+
+.credential {
+  margin: 0;
+}
+
+.compact-list {
+  margin-top: 0;
+}
+
+.compact-list li {
+  margin: 0.45rem 0;
+}
+
+.resume-footer {
+  padding: 2rem 0 1rem;
+  font-size: 0.85rem;
+  color: rgba(233, 237, 243, 0.48);
+}
+
+@media (max-width: 700px) {
+  .resume-header h1 {
+    font-size: 2.65rem;
+  }
+
+  .skill-grid,
+  .split-section {
+    grid-template-columns: 1fr;
+  }
+
+  .split-section {
+    gap: 2.5rem;
+  }
+
+  .resume-section {
+    padding: 2rem 0;
+  }
+}
