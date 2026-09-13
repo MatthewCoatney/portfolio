@@ -1,0 +1,66 @@
+<main class="article-page shell">
+  <a class="back" routerLink="/blog">← Back to blog</a>
+
+  <header class="article-hero">
+    <div class="hero-main">
+      <div class="article-meta">
+        <span>{{ post.type }}</span>
+        <span>{{ post.category }}</span>
+      </div>
+
+      <h1>{{ post.title }}</h1>
+
+      <p class="dek">{{ post.excerpt }}</p>
+
+      <div class="topic-list" aria-label="Topics">
+        @for (topic of post.topics; track topic) {
+          <span>{{ topic }}</span>
+        }
+      </div>
+    </div>
+
+    <aside class="article-sidebar" aria-label="Article information">
+      <div class="sidebar-block">
+        <span class="sidebar-label">Category</span>
+        <strong>{{ post.category }}</strong>
+      </div>
+
+      @if (post.presentation) {
+        <div class="sidebar-block">
+          <span class="sidebar-label">Presentation</span>
+          <strong>{{ post.presentation.date }}</strong>
+        </div>
+      }
+
+      <div class="sidebar-block">
+        <span class="sidebar-label">Topics</span>
+
+        <div class="sidebar-topics">
+          @for (topic of post.topics; track topic) {
+            <span>{{ topic }}</span>
+          }
+        </div>
+      </div>
+    </aside>
+  </header>
+
+  <section class="article-layout">
+    <article class="article-content">
+      <ng-content></ng-content>
+    </article>
+
+    <aside class="article-rail" aria-label="Article navigation">
+      <div class="rail-card">
+        <p>Explore the ideas behind the implementation.</p>
+
+        <nav>
+          <a href="#overview">Overview</a>
+          <a href="#why-monorepos">Why monorepos</a>
+          <a href="#nx-workspaces">Nx Workspaces</a>
+          <a href="#developer-experience">Developer experience</a>
+          <a href="#presentation">Presentation</a>
+        </nav>
+      </div>
+    </aside>
+  </section>
+</main>

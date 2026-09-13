@@ -1,0 +1,140 @@
+<app-blog-article-shell [post]="post">
+
+  <section id="overview">
+    <p>
+      A monorepo is not simply a repository with a lot of code in it. It is an
+      architectural decision about how related applications, services, libraries,
+      and tooling should evolve together.
+    </p>
+
+    <p>
+      In this presentation I explored Nx Workspaces as a practical way to organize
+      growing software systems while preserving consistency across the development
+      experience.
+    </p>
+
+    <blockquote>
+      The real question is not whether one repository is better than many.
+      It is how we prevent a growing software system from becoming a collection
+      of isolated engineering environments.
+    </blockquote>
+  </section>
+
+  <section id="why-monorepos">
+    <h2>Why monorepos?</h2>
+
+    <p>
+      As applications grow, teams often accumulate separate frontend apps,
+      backend services, libraries, utilities, and shared domain logic.
+      When each project evolves independently, the cost of coordination grows.
+    </p>
+
+    <p>
+      Monorepos can reduce that friction by allowing related projects to share
+      infrastructure, conventions, tooling, and change history.
+    </p>
+
+    <ul>
+      <li>Related changes can be committed together.</li>
+      <li>Shared libraries can evolve alongside their consumers.</li>
+      <li>Developers encounter a more consistent development environment.</li>
+      <li>Architecture becomes easier to inspect across project boundaries.</li>
+    </ul>
+  </section>
+
+  <section id="nx-workspaces">
+    <h2>What Nx adds</h2>
+
+    <p>
+      Nx provides structure and tooling around the monorepo model. Rather than
+      treating the repository as a large undifferentiated folder tree, Nx models
+      applications and libraries as projects with explicit relationships.
+    </p>
+
+    <h3>Angular and NestJS together</h3>
+
+    <p>
+      One of the most useful characteristics of the workspace is the ability to
+      manage frontend and backend applications within the same engineering system.
+      Angular applications, NestJS services, shared interfaces, and reusable
+      libraries can participate in a common workspace without becoming identical
+      projects.
+    </p>
+
+    <h3>Generators and Nx Console</h3>
+
+    <p>
+      Generators provide repeatable ways to create applications, libraries,
+      modules, and other architectural units. Nx Console exposes these operations
+      through the development environment, reducing the amount of command syntax
+      developers need to remember while preserving consistent project structure.
+    </p>
+  </section>
+
+  <section id="developer-experience">
+    <h2>Developer experience is architecture</h2>
+
+    <p>
+      Developer experience is not merely convenience. The structure of a system
+      influences how safely and confidently developers can move through it.
+    </p>
+
+    <p>
+      A consistent workspace can improve developer mobility. Someone working in an
+      Angular application can move into another project without encountering an
+      entirely different build philosophy, dependency model, command structure,
+      or repository convention.
+    </p>
+
+    <h3>Atomic changes</h3>
+
+    <p>
+      Related changes can live in a single pull request. When a shared interface
+      changes alongside the frontend and backend code that consumes it, the entire
+      modification can be reviewed as one coherent unit rather than coordinated
+      across multiple repositories.
+    </p>
+
+    <h3>Modern tooling</h3>
+
+    <p>
+      Nx also provides tooling for understanding the system itself: project
+      relationships, generators, targets, shared libraries, and development
+      commands become easier to discover and operate.
+    </p>
+  </section>
+
+  <section id="presentation" class="presentation-section">
+    <div class="presentation-heading">
+      <p class="presentation-label">Original DevTalk · July 6, 2022</p>
+      <h2>Watch the presentation</h2>
+      <p>
+        This recording captures the original developer presentation on monorepos,
+        Nx Workspaces, Angular, NestJS, shared code, atomic changes, and developer
+        experience.
+      </p>
+    </div>
+
+    <div class="video-frame">
+      <iframe
+        src="https://www.youtube.com/embed/FyO2GoONAoI"
+        title="Introduction to Monorepos with Nx Workspaces"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <a
+      class="youtube-link"
+      href="https://youtu.be/FyO2GoONAoI"
+      target="_blank"
+      rel="noreferrer"
+    >
+      Watch on YouTube ↗
+    </a>
+  </section>
+
+</app-blog-article-shell>
+
+<app-contact-footer />

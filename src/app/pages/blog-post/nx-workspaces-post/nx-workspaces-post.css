@@ -1,0 +1,51 @@
+.presentation-section {
+  margin-top: 84px;
+  padding-top: 42px;
+  border-top: 1px solid var(--line);
+}
+
+.presentation-heading {
+  max-width: 700px;
+}
+
+.presentation-label {
+  margin-bottom: 10px !important;
+  color: var(--cyan) !important;
+  font-size: 11px !important;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.presentation-heading h2 {
+  margin-top: 0 !important;
+}
+
+.video-frame {
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #05070b;
+  box-shadow: 0 24px 60px rgba(0,0,0,.28);
+}
+
+.video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.youtube-link {
+  display: inline-block;
+  margin-top: 18px;
+  color: var(--cyan);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}

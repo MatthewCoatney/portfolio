@@ -1,0 +1,246 @@
+:host {
+  display: block;
+}
+
+.article-page {
+  padding: 92px 0 90px;
+}
+
+.back {
+  display: inline-block;
+  color: var(--muted);
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.article-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(260px, .5fr);
+  gap: 4rem;
+  align-items: start;
+  margin-top: 48px;
+  padding-bottom: 54px;
+  border-bottom: 1px solid var(--line);
+}
+
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+  color: var(--cyan);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.article-meta span:not(:last-child)::after {
+  content: '·';
+  margin-left: 12px;
+  color: var(--faint);
+}
+
+.article-hero h1 {
+  max-width: 950px;
+  margin: 0;
+  font-size: clamp(54px, 8vw, 108px);
+  line-height: .9;
+  letter-spacing: -.06em;
+}
+
+.dek {
+  max-width: 800px;
+  margin: 30px 0 0;
+  color: var(--muted);
+  font-size: clamp(19px, 2vw, 23px);
+  line-height: 1.55;
+}
+
+.topic-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.topic-list span,
+.sidebar-topics span {
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: #c7cfda;
+  background: rgba(255,255,255,.025);
+  font-size: 11px;
+}
+
+.article-sidebar {
+  display: grid;
+  gap: 20px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(17, 26, 45, .8),
+      rgba(8, 14, 25, .65)
+    );
+}
+
+.sidebar-block {
+  display: grid;
+  gap: 6px;
+}
+
+.sidebar-label {
+  color: var(--faint);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+}
+
+.sidebar-block strong {
+  font-size: 14px;
+}
+
+.sidebar-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.article-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 790px) minmax(220px, 1fr);
+  justify-content: space-between;
+  gap: 72px;
+  margin-top: 72px;
+}
+
+.article-content {
+  min-width: 0;
+}
+
+.article-content ::ng-deep p {
+  color: #c4ccdb;
+  font-size: 18px;
+  line-height: 1.85;
+  margin: 0 0 28px;
+}
+
+.article-content ::ng-deep h2 {
+  margin: 76px 0 20px;
+  font-size: clamp(34px, 4vw, 48px);
+  letter-spacing: -.04em;
+}
+
+.article-content ::ng-deep h3 {
+  margin: 46px 0 16px;
+  font-size: 24px;
+  letter-spacing: -.025em;
+}
+
+.article-content ::ng-deep blockquote {
+  margin: 54px 0;
+  padding: 24px 0 24px 28px;
+  border-left: 2px solid var(--cyan);
+  color: white;
+  font-family: "Instrument Serif", serif;
+  font-size: 31px;
+  line-height: 1.35;
+}
+
+.article-content ::ng-deep ul {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0 32px;
+  padding-left: 22px;
+  color: #c4ccdb;
+}
+
+.article-content ::ng-deep li {
+  padding-left: 4px;
+  line-height: 1.65;
+}
+
+.article-content ::ng-deep strong {
+  color: white;
+}
+
+.article-content ::ng-deep code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.article-rail {
+  position: relative;
+}
+
+.rail-card {
+  position: sticky;
+  top: 110px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(8, 14, 25, .65);
+}
+
+.rail-card p {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.rail-card nav {
+  display: grid;
+  gap: 10px;
+}
+
+.rail-card a {
+  color: #d7deea;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.rail-card a:hover {
+  color: var(--cyan);
+}
+
+@media (max-width: 950px) {
+  .article-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .article-sidebar {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .article-layout {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .article-rail {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .article-page {
+    padding-top: 72px;
+  }
+
+  .article-hero {
+    margin-top: 34px;
+  }
+
+  .article-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .article-content ::ng-deep p {
+    font-size: 16px;
+  }
+}
