@@ -2,6 +2,36 @@ import { BlogPost } from '../models/blog-post';
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: 'a-bullet-is-rapid-a-leopard-is-agile',
+    route: '/blog/a-bullet-is-rapid-a-leopard-is-agile',
+
+    title: 'A Bullet Is Rapid. A Leopard Is Agile.',
+    seoTitle:
+      'A Bullet Is Rapid. A Leopard Is Agile. | Agile Scrum | Matthew Coatney',
+
+    description:
+      'Agile development is not simply rapid development. It is the ability to maneuver quickly in response to change and early feedback.',
+
+    excerpt:
+      'Speed matters, but rapid development is not necessarily Agile development. Agility is the ability to maneuver when the target moves.',
+
+    type: 'Engineering Note',
+    category: 'Reducing Complexity',
+
+    topics: [
+      'Agile',
+      'Scrum',
+      'Reducing Complexity',
+      'Software Development',
+      'Lean'
+    ],
+
+    published: '2026-09-15',
+
+    featured: true
+  },
+
+  {
     slug: 'monorepos-nx-workspaces',
     route: '/blog/monorepos-nx-workspaces',
 

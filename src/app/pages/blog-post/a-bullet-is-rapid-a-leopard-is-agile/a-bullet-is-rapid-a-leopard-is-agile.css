@@ -1,0 +1,40 @@
+:host {
+  display: block;
+}
+
+.article-image {
+  margin: 0 0 48px;
+}
+
+.article-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+.opening {
+  color: white;
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.2;
+}
+
+.formula {
+  margin: 36px 0 !important;
+  color: var(--cyan) !important;
+  font-size: 15px !important;
+  font-weight: 800;
+  letter-spacing: .18em;
+}
+
+blockquote {
+  margin: 52px 0;
+  padding: 24px 0 24px 30px;
+  border-left: 3px solid var(--cyan);
+  color: white;
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(27px, 3vw, 35px);
+  line-height: 1.35;
+}
